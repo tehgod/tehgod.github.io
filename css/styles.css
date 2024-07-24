@@ -1,0 +1,158 @@
+/* Author: Shelby Martin
+File Name: styles.css */
+
+nav {
+    display: block;
+    text-align: center;
+    font-size: 5vw;
+    background-color: aquamarine;
+}
+
+footer {
+    font-size: 1vw;
+    text-align: center;
+}
+
+body {
+    /* background-color: #75a3ff; */
+    /* background: url(/images/wallhaven-3l3opv.png); */
+    background-size: auto;
+    background-repeat: no-repeat;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+table {
+    width: 25%;
+    border-collapse: collapse;
+}
+
+footer audio {
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+footer a{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+/* Index Page */
+header h1 {
+    text-align: center;
+}
+
+main div p {
+    text-align: center;
+}
+
+/* Skills Page */
+.skills-container {
+    justify-content: center;
+    box-sizing: border-box;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-item {
+    display: inline-block;
+    width: 15em;
+    margin: 2em;
+    height: 100%;
+    padding: 1em;
+    border: .1em solid black;
+    border-radius: 1em;
+}
+
+.skill-item h3 {
+    text-align: center;
+    font-size: 2vw;
+}
+
+/* Employment Page */
+.job-container {
+    border: .2em solid black;
+    padding: 1em;
+    margin: .5em;
+}
+
+.job-logo {
+    text-align: center;
+}
+
+.job-logo img{
+    max-width: 50%;
+    max-height: 100px;
+}
+
+.job-headers{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.job-title {
+    text-align: left;
+}
+
+.job-years {
+    text-align: right;
+}
+
+.job-details ul{
+    margin: 0;
+}
+
+
+/* Projects Page */
+
+table {
+    display: block;
+    margin: .5em auto;
+    text-align: center;
+    border: .5em solid black;
+    padding: .1em;
+}
+th, td {
+    border: .1em solid black;
+}
+
+/* Contact Page */
+#contact-form {
+    display: block;
+    border: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Mobile specific */
+@media screen and (max-width: 600px){
+    
+    nav {
+        font-size: 2em;
+    }
+
+}
+
+/* large desktop specific */
+@media screen and (min-width: 1600px){
+    
+    nav {
+        font-size: 5em;
+    }
+
+}
