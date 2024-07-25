@@ -1,81 +1,116 @@
 <!-- Author: Shelby Martin
-File Name: skills.html -->
+File Name: contact.html -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Shelby Homelab</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav>
-            <div id="navigation-bar">
-                <a href="index.html">Home</a>
-                <a href="employment.html">Employment History</a>
-                <a href="projects.html">Projects</a>
-                <a href="skills.html">Skills</a>
-                <a href="contact.html">Contact</a>
+<head>
+    <title>Shelby Homelab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="action.js"></script>
+    <script type="text/javascript">function submit_action(){action()}</script>
+</head>
+<body>
+    <nav>
+        <div id="navigation-bar">
+            <a href="index.html">Home</a>
+            <a href="employment.html">Employment History</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <header>
+        <div>
+            <h1>Contact me</h1>
+        </div>
+    </header>
+    <main>
+        <div id="contact-form">
+            <div class="hidden form-submitted"><p>Form Submitted</p></div>
+            <div class="form-unsubmitted">
+                <form>
+                    <!-- Text Boxes -->
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.." required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="Your phone number.." required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email.." required>
+                    </div>
+                    
+                    <!-- Radio Buttons -->
+                    <div>
+                        <label>Priority Level</label><br>
+                        <label>
+                            <input type="radio" name="priority" value="High" required>
+                            High
+                        </label>
+                        <label>
+                            <input type="radio" name="priority" value="Low">
+                            Low
+                        </label>
+                    </div>
+
+                    <!-- Checkboxes -->
+                    <div>
+                        <label>Subscribe to Newsletter</label><br>
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Yes, I want to receive updates
+                        </label>
+                        <label>
+                            <input type="checkbox" name="offers" value="yes">
+                            Yes, I want to receive special offers
+                        </label>
+                    </div>
+                    
+                    <!-- Dropdown Box -->
+                    <div>
+                        <label for="itype">Inquiry Type</label>
+                        <select id="itype" name="itype">
+                            <option value="General">General Request</option>
+                            <option value="Contact">Reply Request</option>
+                            <option value="Issue">Site Issue</option>
+                            <option value="Other">Other Issue</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Textarea -->
+                    <div>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." rows="3" cols="25"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div>
+                        <button id="test" type="button" onclick="submit_action()">Submit</button>
+                    </div>
+                </form>
             </div>
-        </nav>
-        <header>
-            <div>
-                <h1>Skills</h1>
-            </div>
-        </header>
-    
-        <main>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <img src="images/python.svg" alt="python logo" height="64">
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/c-sharp-c.svg" alt="python logo" height="64">
-                    <h3>C#</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/icons8-ansible-144.svg" alt="python logo" height="64">
-                    <h3>Ansible</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/icons8-docker-144.svg" alt="python logo" height="64">
-                    <h3>Docker</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/icons8-azure-144.svg" alt="python logo" height="64">
-                    <h3>Azure</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/icons8-microsoft-sql-server-144.svg" alt="python logo" height="64">
-                    <h3>SQL Server</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/mysql-original-wordmark.svg" alt="python logo" height="64">
-                    <h3>MySQL</h3>
-                </div>
-                <div class="skill-item">
-                    <img src="images/terraform.svg" alt="python logo" height="64">
-                    <h3>Terraform</h3>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div>
-                <a href="mailto:shelby@shelbyhomelab.com">shelby@shelbyhomelab.com</a>
-            </div>
-            <audio controls autoplay id="audio">
-                <source src="audio/background_audio.mp3" type="audio/mpeg">
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="mailto:shelby@shelbyhomelab.com">shelby@shelbyhomelab.com</a>
+        </div>
+        <audio controls autoplay id="audio">
+            <source src="audio/background_audio.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
-            </audio> 
-        </footer>
-    </body>
-    <script>
-        var audio = document.getElementById("audio");
-        audio.volume = 0.15;
-    </script>
-</html> 
+        </audio>
+    </footer>
+</body>
+<script>
+    var audio = document.getElementById("audio");
+    audio.volume = 0.15;
+</script>
+</html>
